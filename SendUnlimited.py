@@ -24,11 +24,11 @@ numberOfTimes = raw_input()
 
 # Now enter the user name which is in your contacts "Friend Name"
 
-getTheUserName = getBrowserContext.find_element_by_xpath('//span[contains(text(),"Friend Name")]')
+getTheUserName = getBrowserContext.find_element_by_xpath('//span[contains(text(),"Friends Name")]')
 getTheUserName.click()
 selectInput = getBrowserContext.find_elements_by_class_name('input')
 
-for x in xrange(1,numberOfTimes):
+for x in xrange(1,int(numberOfTimes)):
 	selectInput[1].send_keys(message)
 	getBrowserContext.find_element_by_class_name('send-container').click()
 	print "Waiting"
